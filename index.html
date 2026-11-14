@@ -1667,3 +1667,1053 @@ loading="lazy"
         avec les éléments validés par le club.
     </p>
 </section>
+
+<style>
+/* RESULTATS ET CLASSEMENTS */
+.results-section {
+    padding: 90px 7%;
+    background: #171920;
+    color: white;
+}
+
+.results-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.results-intro {
+    text-align: center;
+    color: #aaa;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.results-highlight {
+    background: linear-gradient(120deg, #292d38, #20232c);
+    border: 1px solid #3a3e4b;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.results-highlight span {
+    color: #ff6969;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.results-highlight h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.results-highlight p {
+    color: #aaa;
+    margin: 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.result-card {
+    background: #22252e;
+    border: 1px solid #343844;
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform .25s, border-color .25s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    border-color: #e63939;
+}
+
+.result-card .competition {
+    color: #ff6969;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.result-card h3 {
+    font-size: 21px;
+    margin: 12px 0 8px;
+}
+
+.result-card p {
+    color: #aaa;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.result-position {
+    font-size: 34px;
+    font-weight: 900;
+    margin-top: 18px;
+}
+
+.results-table-wrap {
+    overflow-x: auto;
+    margin-top: 55px;
+    border-radius: 15px;
+    border: 1px solid #343844;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+    background: #22252e;
+}
+
+.results-table th,
+.results-table td {
+    padding: 17px;
+    text-align: left;
+    border-bottom: 1px solid #343844;
+}
+
+.results-table th {
+    background: #2c303b;
+    color: #ff6969;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.results-table td {
+    color: #ddd;
+}
+
+.results-table tr:last-child td {
+    border-bottom: none;
+}
+
+.results-note {
+    color: #888;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 25px;
+}
+</style>
+
+<section class="results-section" id="resultats">
+    <h2>RÉSULTATS & CLASSEMENTS</h2>
+
+    <p class="results-intro">
+        Retrouvez les performances des pilotes du CCPVHS
+        lors des compétitions et des rendez-vous sportifs.
+    </p>
+
+    <div class="results-highlight">
+        <span>FIERTÉ DU CLUB</span>
+        <h3>Le CCPVHS en compétition</h3>
+        <p>
+            Des pilotes engagés, des progrès et des performances
+            tout au long de la saison.
+        </p>
+    </div>
+
+    <h3 class="team-category">Derniers résultats</h3>
+
+    <div class="results-grid">
+
+        <article class="result-card">
+            <span class="competition">COMPÉTITION BMX</span>
+            <h3>Nom de la compétition</h3>
+            <p>Date : à compléter</p>
+            <p>Pilote : à compléter</p>
+            <div class="result-position">—</div>
+            <p>Résultat à compléter</p>
+        </article>
+
+        <article class="result-card">
+            <span class="competition">COUPE DE FRANCE</span>
+            <h3>Nom de l'épreuve</h3>
+            <p>Date : à compléter</p>
+            <p>Pilote : à compléter</p>
+            <div class="result-position">—</div>
+            <p>Résultat à compléter</p>
+        </article>
+
+        <article class="result-card">
+            <span class="competition">CHAMPIONNAT</span>
+            <h3>Nom du championnat</h3>
+            <p>Date : à compléter</p>
+            <p>Pilote : à compléter</p>
+            <div class="result-position">—</div>
+            <p>Résultat à compléter</p>
+        </article>
+
+    </div>
+
+    <h3 class="team-category">Classement du club</h3>
+
+    <div class="results-table-wrap">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Pilote</th>
+                    <th>Catégorie</th>
+                    <th>Position</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nom du pilote</td>
+                    <td>À compléter</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Nom du pilote</td>
+                    <td>À compléter</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Nom du pilote</td>
+                    <td>À compléter</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="results-note">
+        Classements et résultats à actualiser avec les résultats officiels.
+    </p>
+</section>
+
+<style>
+/* GALERIE PHOTOS CCPVHS */
+.gallery-section {
+    padding: 90px 7%;
+    background: #101116;
+    color: white;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.gallery-intro {
+    color: #aaa;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #252832;
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 15px 15px;
+    background: linear-gradient(transparent, #000c);
+    color: white;
+    font-weight: bold;
+}
+
+.gallery-instagram {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.gallery-instagram a {
+    display: inline-block;
+    background: #e63939;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.gallery-instagram a:hover {
+    transform: scale(1.05);
+    background: #c92525;
+}
+</style>
+
+<section class="gallery-section" id="galerie">
+
+    <h2>GALERIE PHOTOS</h2>
+
+    <p class="gallery-intro">
+        Revivez les meilleurs moments du CCPVHS :
+        entraînements, compétitions, podiums et vie du club.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="images/galerie-1.jpg"
+                 alt="Photo BMX CCPVHS 1">
+            <div class="gallery-caption">La vie du club</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galerie-2.jpg"
+                 alt="Photo BMX CCPVHS 2">
+            <div class="gallery-caption">Entraînements</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galerie-3.jpg"
+                 alt="Photo BMX CCPVHS 3">
+            <div class="gallery-caption">Compétitions</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galerie-4.jpg"
+                 alt="Photo BMX CCPVHS 4">
+            <div class="gallery-caption">Les pilotes</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galerie-5.jpg"
+                 alt="Photo BMX CCPVHS 5">
+            <div class="gallery-caption">Les podiums</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galerie-6.jpg"
+                 alt="Photo BMX CCPVHS 6">
+            <div class="gallery-caption">Les moments forts</div>
+        </div>
+
+    </div>
+
+    <div class="gallery-instagram">
+        <a href="https://www.instagram.com/ccpvhs/"
+           target="_blank" rel="noopener">
+            📸 Suivre le CCPVHS sur Instagram
+        </a>
+    </div>
+
+</section>
+
+<style>
+/* PADLET, BOUTIQUE ET CONTACT */
+.links-section {
+    padding: 90px 7%;
+    background: #101116;
+    color: white;
+}
+
+.links-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 15px;
+}
+
+.links-intro {
+    text-align: center;
+    color: #aaa;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.link-card {
+    background: #1d2029;
+    border: 1px solid #343844;
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+    transition: .25s;
+}
+
+.link-card:hover {
+    transform: translateY(-7px);
+    border-color: #e63939;
+}
+
+.link-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.link-card h3 {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.link-card p {
+    color: #aaa;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.link-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #e63939;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.link-button:hover {
+    background: #c92525;
+    transform: scale(1.04);
+}
+
+.contact-box {
+    margin-top: 65px;
+    padding: 35px;
+    background: #1d2029;
+    border: 1px solid #343844;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contact-box h3 {
+    font-size: 27px;
+    margin-top: 0;
+}
+
+.contact-box p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.contact-box a {
+    color: #ff6969;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<section class="links-section" id="liens">
+    <h2>RESTER CONNECTÉ</h2>
+
+    <p class="links-intro">
+        Retrouvez les actualités, les informations et les produits
+        du Club Cycliste du Pays de Vesoul Haute-Saône.
+    </p>
+
+    <div class="links-grid">
+
+        <article class="link-card">
+            <div class="link-icon">📋</div>
+            <h3>Padlet du club</h3>
+            <p>
+                Retrouvez les informations, les publications
+                et les actualités partagées par le CCPVHS.
+            </p>
+            <a class="link-button"
+               href="https://padlet.com/ccpvhs/ccpvhs-uzmdfgplu7o4afbv?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+               target="_blank" rel="noopener">
+                Ouvrir le Padlet
+            </a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">🛍️</div>
+            <h3>Boutique officielle</h3>
+            <p>
+                Découvrez les articles et produits proposés
+                par le club sur sa boutique HelloAsso.
+            </p>
+            <a class="link-button"
+               href="https://www.helloasso.com/associations/club-cycliste-du-pays-de-vesoul-haute-saone/boutiques/boutique-ccpvhs"
+               target="_blank" rel="noopener">
+                Voir la boutique
+            </a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">📸</div>
+            <h3>Instagram</h3>
+            <p>
+                Suivez les actualités, les photos et les
+                moments forts de la vie du club.
+            </p>
+            <a class="link-button"
+               href="https://www.instagram.com/ccpvhs/"
+               target="_blank" rel="noopener">
+                Voir Instagram
+            </a>
+        </article>
+
+    </div>
+
+    <div class="contact-box" id="contact">
+        <h3>CONTACTER LE CCPVHS</h3>
+        <p>
+            Une question sur le club, les entraînements ou les inscriptions ?
+            Retrouvez les coordonnées officielles du club.
+        </p>
+        <p>
+            <strong>Club :</strong> Club Cycliste du Pays de Vesoul Haute-Saône
+        </p>
+        <p>
+            <strong>Ville :</strong> Vesoul, Haute-Saône
+        </p>
+        <p>
+            <strong>Site :</strong> CCPVHS
+        </p>
+    </div>
+</section>
+
+<style>
+/* ACTUALITES ET CALENDRIER */
+.events-section {
+    padding: 90px 7%;
+    background: #171920;
+    color: white;
+}
+
+.events-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 15px;
+}
+
+.events-intro {
+    text-align: center;
+    color: #aaa;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.event-card {
+    background: #22252e;
+    border: 1px solid #343844;
+    border-radius: 18px;
+    padding: 25px;
+    transition: .25s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    border-color: #e63939;
+}
+
+.event-type {
+    color: #ff6969;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.event-card h3 {
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.event-card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.event-date {
+    display: inline-block;
+    margin-top: 12px;
+    background: #e6393920;
+    color: #ff6969;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.calendar-table-wrap {
+    overflow-x: auto;
+    margin-top: 55px;
+    border-radius: 15px;
+    border: 1px solid #343844;
+}
+
+.calendar-table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    background: #22252e;
+}
+
+.calendar-table th,
+.calendar-table td {
+    padding: 17px;
+    text-align: left;
+    border-bottom: 1px solid #343844;
+}
+
+.calendar-table th {
+    color: #ff6969;
+    background: #2c303b;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.calendar-table td {
+    color: #ddd;
+}
+
+.calendar-table tr:last-child td {
+    border-bottom: none;
+}
+
+.events-note {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-top: 25px;
+}
+</style>
+
+<section class="events-section" id="actualites">
+
+    <h2>ACTUALITÉS & ÉVÉNEMENTS</h2>
+
+    <p class="events-intro">
+        Retrouvez les rendez-vous importants du CCPVHS,
+        les compétitions et les événements de la saison.
+    </p>
+
+    <div class="events-grid">
+
+        <article class="event-card">
+            <span class="event-type">COMPÉTITION</span>
+            <h3>Prochaine course BMX</h3>
+            <p>
+                Retrouvez les informations sur la prochaine
+                compétition des pilotes du club.
+            </p>
+            <span class="event-date">Date à compléter</span>
+        </article>
+
+        <article class="event-card">
+            <span class="event-type">VIE DU CLUB</span>
+            <h3>Entraînements</h3>
+            <p>
+                Retrouvez les informations concernant
+                les séances et les groupes d'entraînement.
+            </p>
+            <span class="event-date">Horaires à compléter</span>
+        </article>
+
+        <article class="event-card">
+            <span class="event-type">ÉVÉNEMENT</span>
+            <h3>Événement CCPVHS</h3>
+            <p>
+                Découvrez les événements et les rendez-vous
+                organisés par le club.
+            </p>
+            <span class="event-date">Date à compléter</span>
+        </article>
+
+    </div>
+
+    <h3 class="team-category">Calendrier des compétitions</h3>
+
+    <div class="calendar-table-wrap">
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Compétition</th>
+                    <th>Lieu</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>À compléter</td>
+                    <td>Compétition BMX</td>
+                    <td>À compléter</td>
+                </tr>
+
+                <tr>
+                    <td>À compléter</td>
+                    <td>Coupe de France</td>
+                    <td>À compléter</td>
+                </tr>
+
+                <tr>
+                    <td>À compléter</td>
+                    <td>Championnat</td>
+                    <td>À compléter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="events-note">
+        Calendrier provisoire : les dates et lieux doivent être confirmés.
+    </p>
+
+</section>
+
+<script>
+/* =================================
+   CCPVHS - INTERACTIONS DU SITE
+================================= */
+
+// 1. ANIMATION AU DÉFILEMENT
+const elementsToReveal = document.querySelectorAll(
+    '.team-card, .result-card, .link-card, .results-highlight'
+);
+
+elementsToReveal.forEach(element => {
+    element.classList.add('reveal');
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+elementsToReveal.forEach(element => {
+    revealObserver.observe(element);
+});
+
+
+// 2. BOUTON RETOUR EN HAUT
+const backToTop = document.createElement('button');
+
+backToTop.textContent = '↑';
+backToTop.setAttribute('aria-label', 'Retour en haut');
+
+backToTop.style.cssText = `
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #e63939;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    box-shadow: 0 5px 20px #0005;
+`;
+
+document.body.appendChild(backToTop);
+
+window.addEventListener('scroll', () => {
+    backToTop.style.display =
+        window.scrollY > 400 ? 'block' : 'none';
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+// 3. ANNÉE AUTOMATIQUE
+const yearElement = document.querySelector('#current-year');
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+
+// 4. DÉFILEMENT FLUIDE DES LIENS INTERNES
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
+// 5. ANIMATION DU CHARGEMENT
+window.addEventListener('load', () => {
+    document.body.classList.add('site-loaded');
+});
+
+</script>
+
+<style>
+/* ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+#back-to-top:hover {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+</style>
+</body>
+</html>
+
+<style>
+/* ACTUALITES CCPVHS */
+.news-section {
+    padding: 90px 7%;
+    background: #171920;
+    color: white;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.news-intro {
+    color: #aaa;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    background: #22252e;
+    border: 1px solid #343844;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+    border-color: #e63939;
+}
+
+.news-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #30333d;
+    display: block;
+}
+
+.news-content {
+    padding: 24px;
+}
+
+.news-label {
+    color: #ff6969;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.news-content h3 {
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.news-content p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.news-date {
+    color: #888;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.news-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff6969;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-bottom {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.news-bottom a {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #e63939;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+
+<section class="news-section" id="actualites">
+    <h2>LES ACTUALITÉS</h2>
+
+    <p class="news-intro">
+        Toutes les informations du CCPVHS :
+        compétitions, événements, annonces et vie du club.
+    </p>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+            <img class="news-image"
+                 src="images/actualite-1.jpg"
+                 alt="Photo d'une compétition du club">
+
+            <div class="news-content">
+                <span class="news-label">COMPÉTITION</span>
+                <h3>Prochaine compétition</h3>
+                <p>
+                    Retrouvez les informations sur la prochaine
+                    compétition et les pilotes engagés.
+                </p>
+                <div class="news-date">Date à compléter</div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img class="news-image"
+                 src="images/actualite-2.jpg"
+                 alt="Photo de la vie du club">
+
+            <div class="news-content">
+                <span class="news-label">VIE DU CLUB</span>
+                <h3>La vie au CCPVHS</h3>
+                <p>
+                    Découvrez les entraînements, les moments
+                    forts et les activités du club.
+                </p>
+                <div class="news-date">Date à compléter</div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img class="news-image"
+                 src="images/actualite-3.jpg"
+                 alt="Photo d'un événement BMX">
+
+            <div class="news-content">
+                <span class="news-label">ÉVÉNEMENT</span>
+                <h3>Événement du club</h3>
+                <p>
+                    Retrouvez les annonces et les rendez-vous
+                    organisés par le CCPVHS.
+                </p>
+                <div class="news-date">Date à compléter</div>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="news-bottom">
+        <a href="https://www.instagram.com/ccpvhs/"
+           target="_blank" rel="noopener">
+            Suivre les actualités
+        </a>
+    </div>
+</section>
