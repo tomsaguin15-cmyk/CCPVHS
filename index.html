@@ -1,0 +1,2382 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CCPVHS | Club Cycliste de Vesoul</title>
+
+<meta name="description" content="Bienvenue sur le site officiel du CCPVHS, Club Cycliste du Pays de Vesoul Haute-Saône. BMX, VTT et cyclisme.">
+
+<link rel="icon" href="logo-ccpvhs.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* BASE DU SITE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080a0e;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --rouge: #ed2939;
+    --bleu: #145bdb;
+    --blanc: #ffffff;
+    --fond: #080a0e;
+    --carte: #141a22;
+    --gris: #9da7b3;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* BARRE FRANÇAISE */
+
+.top-line {
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #174fce 33.33%,
+        white 33.33% 66.66%,
+        #ed2939 66.66%
+    );
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8,10,14,0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ffffff18;
+}
+
+.navbar {
+    max-width: 1250px;
+    height: 85px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    background: white;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--rouge);
+}
+
+.nav-button {
+    background: var(--rouge);
+    padding: 13px 20px;
+    border-radius: 3px;
+}
+
+/* ACCUEIL */
+
+.hero {
+    min-height: 720px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,7,10,0.96),
+        rgba(5,7,10,0.65),
+        rgba(5,7,10,0.15)
+    ),
+    url("https://cdn-s-www.estrepublicain.fr/images/2B3A81C0-E44F-4D47-B26D-4F02658ED58E/NW_raw/la-piste-de-bmx-entierement-renovee-en-2022-est-dotee-d-une-rampe-de-lancement-surelevee-avec-une-grille-de-depart-a-5-metres-de-hauteur-photo-patrick-bar-1724868594.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+}
+
+.hero-small {
+    color: #d4dbe3;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(90px, 13vw, 170px);
+    font-weight: 900;
+    line-height: 0.85;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--rouge);
+}
+
+.hero p {
+    max-width: 550px;
+    color: #c4cbd3;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 23px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.btn-red {
+    background: var(--rouge);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+/* INFORMATIONS EN BAS */
+
+.hero-info {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-info span {
+    color: #c0c8d1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 800px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .hero {
+        min-height: 650px;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 95px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-info {
+        gap: 12px;
+        font-size: 10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-line"></div>
+
+<!-- MENU -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="#accueil" class="logo">
+<img src="logo-ccpvhs.png" alt="Logo CCPVHS">
+</a>
+
+<div class="nav-links">
+
+<a href="#club">Le club</a>
+<a href="#disciplines">Disciplines</a>
+<a href="#piste">La piste</a>
+<a href="#coachs">Les coachs</a>
+<a href="#pilotes">Les pilotes</a>
+<a href="#resultats">Résultats</a>
+
+<a href="https://www.helloasso.com/associations/club-cycliste-du-pays-de-vesoul-haute-saone/boutiques/boutique-ccpvhs"
+class="nav-button" target="_blank">
+Boutique
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- PAGE D'ACCUEIL -->
+
+<section class="hero" id="accueil">
+
+<div class="hero-content">
+
+<div class="hero-small">
+Club Cycliste du Pays de Vesoul Haute-Saône
+</div>
+
+<h1>
+CCPVHS
+<span>RIDE.</span>
+</h1>
+
+<p>
+Bienvenue au CCPVHS !
+
+Un club, une équipe et une passion commune :
+le cyclisme.
+
+BMX Race, VTT et cyclisme sur route,
+retrouve toute la vie du club,
+ses pilotes, ses compétitions et ses résultats.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#club" class="btn btn-red">
+Découvrir le club →
+</a>
+
+<a href="https://padlet.com/ccpvhs/ccpvhs-uzmdfgplu7o4afbv?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+target="_blank" class="btn btn-outline">
+Padlet du club ↗
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-info">
+
+<span>🏁 BMX RACE</span>
+<span>🇫🇷 HAUTE-SAÔNE</span>
+<span>🚴 ESPRIT D'ÉQUIPE</span>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- PARTIE 2 : LE CLUB ET DISCIPLINES -->
+<!-- ================================= -->
+
+<style>
+
+/* SECTIONS */
+
+.section-club {
+    padding: 110px 25px;
+    background: #080a0e;
+}
+
+.section-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.section-label {
+    color: #ed2939;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: .95;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.section-title span {
+    color: #ed2939;
+}
+
+.section-description {
+    color: #aab3bf;
+    max-width: 600px;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* PRESENTATION */
+
+.club-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.club-image {
+    position: relative;
+}
+
+.club-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.club-image:hover img {
+    transform: scale(1.025);
+}
+
+.club-image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #ed2939;
+    padding: 12px 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.club-text p {
+    color: #aab3bf;
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.club-numbers {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.club-number {
+    padding: 20px 12px;
+    background: #141a22;
+    border: 1px solid #ffffff12;
+}
+
+.club-number strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.club-number small {
+    color: #929daa;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* DISCIPLINES */
+
+.disciplines-section {
+    padding: 110px 25px;
+    background: #10151c;
+}
+
+.disciplines-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.discipline-card {
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    background: #1a2029;
+    border: 1px solid #ffffff15;
+    border-radius: 5px;
+    transition: .35s;
+}
+
+.discipline-card:hover {
+    transform: translateY(-9px);
+    border-color: #ed2939;
+}
+
+.discipline-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .65;
+    transition: .5s;
+}
+
+.discipline-card:hover img {
+    transform: scale(1.08);
+    opacity: .85;
+}
+
+.discipline-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 30%,
+        rgba(0,0,0,.95)
+    );
+}
+
+.discipline-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+}
+
+.discipline-content small {
+    color: #ed2939;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.discipline-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.discipline-content p {
+    color: #c0c8d2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ESPRIT CLUB */
+
+.club-values {
+    padding: 100px 25px;
+    background: #080a0e;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.value-card {
+    padding: 30px;
+    background: #141a22;
+    border: 1px solid #ffffff12;
+    transition: .3s;
+}
+
+.value-card:hover {
+    border-color: #ed2939;
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 27px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: #9da7b3;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* TELEPHONE */
+
+@media(max-width:800px) {
+
+    .club-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .club-image img {
+        height: 300px;
+    }
+
+    .discipline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .discipline-card {
+        height: 330px;
+    }
+
+    .disciplines-header {
+        display: block;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .club-numbers {
+        gap: 7px;
+    }
+
+    .club-number {
+        padding: 13px 7px;
+    }
+
+    .club-number strong {
+        font-size: 27px;
+    }
+
+}
+
+</style>
+
+
+<!-- PRESENTATION DU CLUB -->
+
+<section class="section-club" id="club">
+
+<div class="section-container">
+
+<div class="club-grid">
+
+<div class="club-text">
+
+<div class="section-label">
+01 — Notre identité
+</div>
+
+<h2 class="section-title">
+BIENVENUE<br>
+AU <span>CCPVHS.</span>
+</h2>
+
+<p>
+Le Club Cycliste du Pays de Vesoul Haute-Saône
+est un club sportif consacré à la pratique
+du cyclisme.
+</p>
+
+<p>
+Depuis 1969, le club participe à la vie sportive
+du territoire vésulien et accompagne les cyclistes
+dans leur progression.
+</p>
+
+<p>
+De la découverte du vélo aux compétitions,
+le CCPVHS rassemble des passionnés autour
+d'un même objectif : partager et faire vivre
+la passion du cyclisme.
+</p>
+
+<p>
+Le club est affilié à la Fédération Française
+de Cyclisme sous le numéro 4270003.
+</p>
+
+<div class="club-numbers">
+
+<div class="club-number">
+<strong>1969</strong>
+<small>Histoire du club</small>
+</div>
+
+<div class="club-number">
+<strong>FFC</strong>
+<small>Club affilié</small>
+</div>
+
+<div class="club-number">
+<strong>70</strong>
+<small>Haute-Saône</small>
+</div>
+
+</div>
+
+</div>
+
+<div class="club-image">
+
+<img
+src="https://cdn-s-www.estrepublicain.fr/images/AF2D16FF-1D34-4F02-B66C-0950CDEF5556/NW_detail_M/title-1679512400.jpg"
+alt="Pilotes de BMX à Vesoul"
+loading="lazy"
+>
+
+<div class="club-image-label">
+La famille CCPVHS
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOS DISCIPLINES -->
+
+<section class="disciplines-section" id="disciplines">
+
+<div class="section-container">
+
+<div class="disciplines-header">
+
+<div>
+
+<div class="section-label">
+02 — Nos pratiques
+</div>
+
+<h2 class="section-title">
+TROIS DISCIPLINES.<br>
+<span>UNE PASSION.</span>
+</h2>
+
+</div>
+
+<p class="section-description">
+Le CCPVHS propose plusieurs pratiques
+du cyclisme, avec des entraînements
+et des compétitions adaptés aux disciplines.
+</p>
+
+</div>
+
+
+<div class="discipline-grid">
+
+
+<!-- BMX -->
+
+<article class="discipline-card">
+
+<img
+src="https://cdn-s-www.estrepublicain.fr/images/2B3A81C0-E44F-4D47-B26D-4F02658ED58E/NW_raw/la-piste-de-bmx-entierement-renovee-en-2022-est-dotee-d-une-rampe-de-lancement-surelevee-avec-une-grille-de-depart-a-5-metres-de-hauteur-photo-patrick-bar-1724868594.jpg"
+alt="Piste BMX de Vesoul"
+loading="lazy"
+>
+
+<div class="discipline-overlay"></div>
+
+<div class="discipline-content">
+
+<small>01 — RACE</small>
+
+<h3>BMX RACE</h3>
+
+<p>
+Des départs rapides, des virages relevés,
+des bosses et des compétitions.
+Le BMX est au cœur de notre projet sportif.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- VTT -->
+
+<article class="discipline-card">
+
+<img
+src="https://images.unsplash.com/photo-1544191696-15693072a8c7?auto=format&fit=crop&w=1000&q=85"
+alt="VTT en pleine nature"
+loading="lazy"
+>
+
+<div class="discipline-overlay"></div>
+
+<div class="discipline-content">
+
+<small>02 — OFF ROAD</small>
+
+<h3>VTT</h3>
+
+<p>
+La pratique du vélo tout-terrain,
+pour travailler la technique,
+l'endurance et le plaisir de rouler.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- ROUTE -->
+
+<article class="discipline-card">
+
+<img
+src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1000&q=85"
+alt="Cyclisme sur route"
+loading="lazy"
+>
+
+<div class="discipline-overlay"></div>
+
+<div class="discipline-content">
+
+<small>03 — ROAD</small>
+
+<h3>CYCLISME ROUTE</h3>
+
+<p>
+Des sorties et des entraînements
+pour progresser sur les routes
+et partager la passion du vélo.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LES VALEURS DU CLUB -->
+
+<section class="club-values">
+
+<div class="section-container">
+
+<div class="section-label">
+03 — Nos valeurs
+</div>
+
+<h2 class="section-title">
+L'ESPRIT <span>CCPVHS.</span>
+</h2>
+
+<div class="values-grid">
+
+<div class="value-card">
+
+<div class="value-icon">🏁</div>
+
+<h3>La compétition</h3>
+
+<p>
+Se dépasser, progresser et représenter
+les couleurs du CCPVHS sur les courses.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<div class="value-icon">🤝</div>
+
+<h3>L'esprit d'équipe</h3>
+
+<p>
+Partager les entraînements, soutenir
+les pilotes et vivre les compétitions
+ensemble.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<div class="value-icon">🚴</div>
+
+<h3>La passion</h3>
+
+<p>
+Faire découvrir le cyclisme et transmettre
+l'envie de rouler à toutes les générations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PARTIE 3 : LA PISTE BMX DE VESOUL -->
+<!-- ===================================== -->
+
+<style>
+
+/* SECTION PISTE */
+
+.piste-section {
+    padding: 110px 25px;
+    background: #090c11;
+}
+
+.piste-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.piste-heading {
+    margin-bottom: 45px;
+}
+
+.piste-heading h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(60px, 9vw, 110px);
+    font-weight: 900;
+    line-height: .85;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.piste-heading h2 span {
+    color: #ed2939;
+}
+
+.piste-heading p {
+    color: #aab3bf;
+    max-width: 650px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+/* GRANDE PHOTO */
+
+.piste-main-photo {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #171d25;
+}
+
+.piste-main-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .6s;
+}
+
+.piste-main-photo:hover img {
+    transform: scale(1.04);
+}
+
+.piste-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,.9),
+        transparent 70%
+    );
+}
+
+.piste-photo-text {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+}
+
+.piste-photo-text small {
+    color: #ff5361;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.piste-photo-text h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* INFORMATIONS */
+
+.piste-infos {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.piste-info {
+    padding: 25px;
+    background: #151b23;
+    border: 1px solid #ffffff12;
+    transition: .3s;
+}
+
+.piste-info:hover {
+    border-color: #ed2939;
+    transform: translateY(-5px);
+}
+
+.piste-info .icon {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.piste-info strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.piste-info span {
+    color: #929eac;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* DESCRIPTION */
+
+.piste-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.piste-description h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: .95;
+    text-transform: uppercase;
+    margin: 18px 0;
+}
+
+.piste-description h3 span {
+    color: #ed2939;
+}
+
+.piste-description p {
+    color: #aab3bf;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+/* EQUIPEMENTS */
+
+.piste-features {
+    display: grid;
+    gap: 12px;
+}
+
+.piste-feature {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background: #151b23;
+    border: 1px solid #ffffff12;
+}
+
+.piste-feature-icon {
+    min-width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #ed293922;
+    color: #ed2939;
+    font-size: 22px;
+}
+
+.piste-feature h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.piste-feature p {
+    font-size: 11px;
+    margin: 0;
+}
+
+/* GALERIE PISTE */
+
+.piste-gallery {
+    margin-top: 100px;
+}
+
+.piste-gallery h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.piste-gallery-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 12px;
+}
+
+.piste-gallery-grid a {
+    height: 220px;
+    overflow: hidden;
+    background: #151b23;
+}
+
+.piste-gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.piste-gallery-grid a:hover img {
+    transform: scale(1.07);
+}
+
+/* BOUTON */
+
+.piste-button {
+    display: inline-block;
+    background: #ed2939;
+    padding: 16px 25px;
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.piste-button:hover {
+    background: white;
+    color: black;
+    transform: translateY(-4px);
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .piste-section {
+        padding: 75px 18px;
+    }
+
+    .piste-main-photo {
+        height: 350px;
+    }
+
+    .piste-photo-text {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .piste-photo-text h3 {
+        font-size: 37px;
+    }
+
+    .piste-infos {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .piste-description {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 65px;
+    }
+
+    .piste-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .piste-gallery-grid a {
+        height: 160px;
+    }
+
+    .piste-gallery-grid a:first-child {
+        grid-column: span 2;
+    }
+
+}
+
+</style>
+
+
+<section class="piste-section" id="piste">
+
+<div class="piste-container">
+
+
+<!-- TITRE -->
+
+<div class="piste-heading">
+
+<div class="section-label">
+04 — Notre infrastructure
+</div>
+
+<h2>
+LA PISTE<br>
+<span>MARCEL-DUPALUT.</span>
+</h2>
+
+<p>
+Bienvenue sur le terrain de jeu des pilotes
+du CCPVHS : la piste BMX Marcel-Dupalut,
+située à Vesoul, en Haute-Saône.
+</p>
+
+</div>
+
+
+<!-- GRANDE PHOTO -->
+
+<div class="piste-main-photo">
+
+<img
+src="https://cdn-s-www.estrepublicain.fr/images/2B3A81C0-E44F-4D47-B26D-4F02658ED58E/NW_raw/la-piste-de-bmx-entierement-renovee-en-2022-est-dotee-d-une-rampe-de-lancement-surelevee-avec-une-grille-de-depart-a-5-metres-de-hauteur-photo-patrick-bar-1724868594.jpg"
+alt="Piste BMX Marcel-Dupalut à Vesoul"
+loading="lazy"
+>
+
+<div class="piste-photo-overlay"></div>
+
+<div class="piste-photo-text">
+
+<small>CCPVHS — VESOUL</small>
+
+<h3>UN TERRAIN DE CHAMPIONS.</h3>
+
+</div>
+
+</div>
+
+
+<!-- CHIFFRES -->
+
+<div class="piste-infos">
+
+<div class="piste-info">
+
+<div class="icon">🏁</div>
+
+<strong>5 m</strong>
+
+<span>Grille de départ</span>
+
+</div>
+
+<div class="piste-info">
+
+<div class="icon">🚴</div>
+
+<strong>6 m</strong>
+
+<span>Hauteur de la butte environ</span>
+
+</div>
+
+<div class="piste-info">
+
+<div class="icon">🏆</div>
+
+<strong>2022</strong>
+
+<span>Rénovation de la piste</span>
+
+</div>
+
+<div class="piste-info">
+
+<div class="icon">📍</div>
+
+<strong>VESOUL</strong>
+
+<span>Haute-Saône</span>
+
+</div>
+
+</div>
+
+
+<!-- DESCRIPTION ET EQUIPEMENTS -->
+
+<div class="piste-description">
+
+<div>
+
+<div class="section-label">
+05 — Les installations
+</div>
+
+<h3>
+UNE PISTE<br>
+POUR <span>PROGRESSER.</span>
+</h3>
+
+<p>
+La piste Marcel-Dupalut a bénéficié d'une
+rénovation en 2022.
+
+Elle dispose d'une butte de départ surélevée
+et d'une grille de départ située à 5 mètres
+de hauteur.
+</p>
+
+<p>
+Elle accueille des entraînements et des
+compétitions de BMX, notamment des
+épreuves régionales et nationales.
+</p>
+
+<a
+class="piste-button"
+href="https://www.google.com/maps/search/?api=1&query=Piste+BMX+Marcel+Dupalut+Vesoul"
+target="_blank"
+rel="noopener"
+>
+LOCALISER LA PISTE ↗
+</a>
+
+</div>
+
+
+<div class="piste-features">
+
+<div class="piste-feature">
+
+<div class="piste-feature-icon">🏁</div>
+
+<div>
+
+<h4>Grille de départ</h4>
+
+<p>
+Une grille de départ située à 5 mètres.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="piste-feature">
+
+<div class="piste-feature-icon">⛰️</div>
+
+<div>
+
+<h4>Butte de départ</h4>
+
+<p>
+Une rampe de lancement surélevée.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="piste-feature">
+
+<div class="piste-feature-icon">↗</div>
+
+<div>
+
+<h4>Virages relevés</h4>
+
+<p>
+Des virages pour travailler les trajectoires.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="piste-feature">
+
+<div class="piste-feature-icon">🏆</div>
+
+<div>
+
+<h4>Compétitions</h4>
+
+<p>
+Une infrastructure accueillant des épreuves BMX.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- GALERIE -->
+
+<div class="piste-gallery">
+
+<div class="section-label">
+06 — En images
+</div>
+
+<h3>LA PISTE EN PHOTOS.</h3>
+
+<div class="piste-gallery-grid">
+
+<a
+href="https://www.estrepublicain.fr/societe/2022/05/30/un-championnat-regional-pour-inaugurer-la-nouvelle-piste-de-bmx"
+target="_blank"
+rel="noopener"
+>
+
+<img
+src="https://cdn-s-www.estrepublicain.fr/images/6CA67777-F48E-4295-AB5D-60C7DCED084E/NW_raw/la-nouvelle-rampe-de-lancement-de-la-piste-de-bmx-de-vesoul-a-ete-inauguree-dimanche-29-mai-a-l-occasion-du-championnat-regional-photo-er-bruno-grandjean-1653927020.jpg"
+alt="Rampe de lancement BMX à Vesoul"
+loading="lazy"
+>
+
+</a>
+
+
+<a
+href="https://www.estrepublicain.fr/sport/2023/03/23/a-vesoul-le-bmx-s-offre-une-piste-aux-etoiles-et-un-avant-gout-de-jeux-olympiques"
+target="_blank"
+rel="noopener"
+>
+
+<img
+src="https://cdn-s-www.estrepublicain.fr/images/AF2D16FF-1D34-4F02-B66C-0950CDEF5556/NW_detail_M/title-1679512400.jpg"
+alt="Pilotes BMX sur la piste"
+loading="lazy"
+>
+
+</a>
+
+
+<a
+href="https://www.estrepublicain.fr/sport/2024/04/01/dimanche-de-paques-sur-la-piste-de-bmx-avec-le-championnat-nord-est"
+target="_blank"
+rel="noopener"
+>
+
+<img
+src="https://cdn-s-www.estrepublicain.fr/images/B8127E1E-D8DE-4411-BA48-86B725613843/NW_raw/hedi-fromm-%28bmx-besancon%29-en-u13-1711960039.jpg"
+alt="Course BMX à Vesoul"
+loading="lazy"
+>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+/* COACHS ET PILOTES */
+.team-section {
+    padding: 90px 7%;
+    background: #101116;
+    color: white;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.team-intro {
+    text-align: center;
+    color: #aaa;
+    margin: 0 auto 45px;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.team-category {
+    margin: 55px 0 25px;
+    font-size: 25px;
+    border-left: 5px solid #e63939;
+    padding-left: 15px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.team-card {
+    background: #1b1d25;
+    border: 1px solid #30323c;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    border-color: #e63939;
+}
+
+.team-photo {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: #292c35;
+}
+
+.team-info {
+    padding: 22px;
+}
+
+.team-info h3 {
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+.team-info p {
+    color: #aaa;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.team-tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 7px 12px;
+    background: #e6393920;
+    color: #ff6969;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.team-note {
+    margin-top: 30px;
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+}
+</style>
+
+<section class="team-section" id="coachs">
+    <h2>LES COACHS</h2>
+    <p class="team-intro">
+        Derrière chaque pilote, une équipe qui accompagne,
+        conseille et fait progresser les sportifs du CCPVHS.
+    </p>
+
+    <div class="team-grid">
+
+        <article class="team-card">
+            <img class="team-photo"
+                 src="images/coach-1.jpg"
+                 alt="Photo du coach">
+            <div class="team-info">
+                <h3>Nom du coach</h3>
+                <p>Présentation et rôle au sein du club.</p>
+                <span class="team-tag">ENTRAÎNEUR BMX</span>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-photo"
+                 src="images/coach-2.jpg"
+                 alt="Photo du coach">
+            <div class="team-info">
+                <h3>Nom du coach</h3>
+                <p>Présentation et rôle au sein du club.</p>
+                <span class="team-tag">ENCADREMENT</span>
+            </div>
+        </article>
+
+    </div>
+
+    <h2 id="pilotes" style="margin-top:100px;">LES PILOTES</h2>
+    <p class="team-intro">
+        Des plus jeunes aux pilotes expérimentés, découvrez
+        les sportifs qui représentent les couleurs du CCPVHS.
+    </p>
+
+    <h3 class="team-category">Pilotes du club</h3>
+
+    <div class="team-grid">
+
+        <article class="team-card">
+            <img class="team-photo"
+                 src="images/pilote-1.jpg"
+                 alt="Photo du pilote">
+            <div class="team-info">
+                <h3>Nom du pilote</h3>
+                <p>Catégorie : à compléter</p>
+                <span class="team-tag">CCPVHS</span>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-photo"
+                 src="images/pilote-2.jpg"
+                 alt="Photo du pilote">
+            <div class="team-info">
+                <h3>Nom du pilote</h3>
+                <p>Catégorie : à compléter</p>
+                <span class="team-tag">CCPVHS</span>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-photo"
+                 src="images/pilote-3.jpg"
+                 alt="Photo du pilote">
+            <div class="team-info">
+                <h3>Nom du pilote</h3>
+                <p>Catégorie : à compléter</p>
+                <span class="team-tag">CCPVHS</span>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="team-note">
+        Les photos et informations des pilotes sont à compléter
+        avec les éléments validés par le club.
+    </p>
+</section>
+
+<style>
+/* RESULTATS ET CLASSEMENTS */
+.results-section {
+    padding: 90px 7%;
+    background: #171920;
+    color: white;
+}
+
+.results-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.results-intro {
+    text-align: center;
+    color: #aaa;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.results-highlight {
+    background: linear-gradient(120deg, #292d38, #20232c);
+    border: 1px solid #3a3e4b;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.results-highlight span {
+    color: #ff6969;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.results-highlight h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.results-highlight p {
+    color: #aaa;
+    margin: 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.result-card {
+    background: #22252e;
+    border: 1px solid #343844;
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform .25s, border-color .25s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    border-color: #e63939;
+}
+
+.result-card .competition {
+    color: #ff6969;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.result-card h3 {
+    font-size: 21px;
+    margin: 12px 0 8px;
+}
+
+.result-card p {
+    color: #aaa;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.result-position {
+    font-size: 34px;
+    font-weight: 900;
+    margin-top: 18px;
+}
+
+.results-table-wrap {
+    overflow-x: auto;
+    margin-top: 55px;
+    border-radius: 15px;
+    border: 1px solid #343844;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+    background: #22252e;
+}
+
+.results-table th,
+.results-table td {
+    padding: 17px;
+    text-align: left;
+    border-bottom: 1px solid #343844;
+}
+
+.results-table th {
+    background: #2c303b;
+    color: #ff6969;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.results-table td {
+    color: #ddd;
+}
+
+.results-table tr:last-child td {
+    border-bottom: none;
+}
+
+.results-note {
+    color: #888;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 25px;
+}
+</style>
+
+<section class="results-section" id="resultats">
+    <h2>RÉSULTATS & CLASSEMENTS</h2>
+
+    <p class="results-intro">
+        Retrouvez les performances des pilotes du CCPVHS
+        lors des compétitions et des rendez-vous sportifs.
+    </p>
+
+    <div class="results-highlight">
+        <span>FIERTÉ DU CLUB</span>
+        <h3>Le CCPVHS en compétition</h3>
+        <p>
+            Des pilotes engagés, des progrès et des performances
+            tout au long de la saison.
+        </p>
+    </div>
+
+    <h3 class="team-category">Derniers résultats</h3>
+
+    <div class="results-grid">
+
+        <article class="result-card">
+            <span class="competition">COMPÉTITION BMX</span>
+            <h3>Nom de la compétition</h3>
+            <p>Date : à compléter</p>
+            <p>Pilote : à compléter</p>
+            <div class="result-position">—</div>
+            <p>Résultat à compléter</p>
+        </article>
+
+        <article class="result-card">
+            <span class="competition">COUPE DE FRANCE</span>
+            <h3>Nom de l'épreuve</h3>
+            <p>Date : à compléter</p>
+            <p>Pilote : à compléter</p>
+            <div class="result-position">—</div>
+            <p>Résultat à compléter</p>
+        </article>
+
+        <article class="result-card">
+            <span class="competition">CHAMPIONNAT</span>
+            <h3>Nom du championnat</h3>
+            <p>Date : à compléter</p>
+            <p>Pilote : à compléter</p>
+            <div class="result-position">—</div>
+            <p>Résultat à compléter</p>
+        </article>
+
+    </div>
+
+    <h3 class="team-category">Classement du club</h3>
+
+    <div class="results-table-wrap">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Pilote</th>
+                    <th>Catégorie</th>
+                    <th>Position</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nom du pilote</td>
+                    <td>À compléter</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Nom du pilote</td>
+                    <td>À compléter</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Nom du pilote</td>
+                    <td>À compléter</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="results-note">
+        Classements et résultats à actualiser avec les résultats officiels.
+    </p>
+</section>
+
+<style>
+/* PADLET, BOUTIQUE ET CONTACT */
+.links-section {
+    padding: 90px 7%;
+    background: #101116;
+    color: white;
+}
+
+.links-section h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 15px;
+}
+
+.links-intro {
+    text-align: center;
+    color: #aaa;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.link-card {
+    background: #1d2029;
+    border: 1px solid #343844;
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+    transition: .25s;
+}
+
+.link-card:hover {
+    transform: translateY(-7px);
+    border-color: #e63939;
+}
+
+.link-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.link-card h3 {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.link-card p {
+    color: #aaa;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.link-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #e63939;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.link-button:hover {
+    background: #c92525;
+    transform: scale(1.04);
+}
+
+.contact-box {
+    margin-top: 65px;
+    padding: 35px;
+    background: #1d2029;
+    border: 1px solid #343844;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contact-box h3 {
+    font-size: 27px;
+    margin-top: 0;
+}
+
+.contact-box p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.contact-box a {
+    color: #ff6969;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<section class="links-section" id="liens">
+    <h2>RESTER CONNECTÉ</h2>
+
+    <p class="links-intro">
+        Retrouvez les actualités, les informations et les produits
+        du Club Cycliste du Pays de Vesoul Haute-Saône.
+    </p>
+
+    <div class="links-grid">
+
+        <article class="link-card">
+            <div class="link-icon">📋</div>
+            <h3>Padlet du club</h3>
+            <p>
+                Retrouvez les informations, les publications
+                et les actualités partagées par le CCPVHS.
+            </p>
+            <a class="link-button"
+               href="https://padlet.com/ccpvhs/ccpvhs-uzmdfgplu7o4afbv?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+               target="_blank" rel="noopener">
+                Ouvrir le Padlet
+            </a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">🛍️</div>
+            <h3>Boutique officielle</h3>
+            <p>
+                Découvrez les articles et produits proposés
+                par le club sur sa boutique HelloAsso.
+            </p>
+            <a class="link-button"
+               href="https://www.helloasso.com/associations/club-cycliste-du-pays-de-vesoul-haute-saone/boutiques/boutique-ccpvhs"
+               target="_blank" rel="noopener">
+                Voir la boutique
+            </a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">📸</div>
+            <h3>Instagram</h3>
+            <p>
+                Suivez les actualités, les photos et les
+                moments forts de la vie du club.
+            </p>
+            <a class="link-button"
+               href="https://www.instagram.com/ccpvhs/"
+               target="_blank" rel="noopener">
+                Voir Instagram
+            </a>
+        </article>
+
+    </div>
+
+    <div class="contact-box" id="contact">
+        <h3>CONTACTER LE CCPVHS</h3>
+        <p>
+            Une question sur le club, les entraînements ou les inscriptions ?
+            Retrouvez les coordonnées officielles du club.
+        </p>
+        <p>
+            <strong>Club :</strong> Club Cycliste du Pays de Vesoul Haute-Saône
+        </p>
+        <p>
+            <strong>Ville :</strong> Vesoul, Haute-Saône
+        </p>
+        <p>
+            <strong>Site :</strong> CCPVHS
+        </p>
+    </div>
+</section>
+
+<script>
+
+/* =================================
+   CCPVHS - INTERACTIONS DU SITE
+================================= */
+
+// 1. ANIMATION AU DÉFILEMENT
+const elementsToReveal = document.querySelectorAll(
+    '.team-card, .result-card, .link-card, .results-highlight'
+);
+
+elementsToReveal.forEach(element => {
+    element.classList.add('reveal');
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+elementsToReveal.forEach(element => {
+    revealObserver.observe(element);
+});
+
+
+// 2. BOUTON RETOUR EN HAUT
+const backToTop = document.createElement('button');
+
+backToTop.textContent = '↑';
+backToTop.setAttribute('aria-label', 'Retour en haut');
+
+backToTop.style.cssText = `
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #e63939;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    box-shadow: 0 5px 20px #0005;
+`;
+
+document.body.appendChild(backToTop);
+
+window.addEventListener('scroll', () => {
+    backToTop.style.display =
+        window.scrollY > 400 ? 'block' : 'none';
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+// 3. ANNÉE AUTOMATIQUE
+const yearElement = document.querySelector('#current-year');
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+
+// 4. DÉFILEMENT FLUIDE DES LIENS INTERNES
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
+// 5. ANIMATION DU CHARGEMENT
+window.addEventListener('load', () => {
+    document.body.classList.add('site-loaded');
+});
+
+</script>
+
+<style>
+/* ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+#back-to-top:hover {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+</style>
+</body>
+</html>
+
+<style>
+/* ACTUALITES CCPVHS */
+.news-section {
+    padding: 90px 7%;
+    background: #171920;
+    color: white;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.news-intro {
+    color: #aaa;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    background: #22252e;
+    border: 1px solid #343844;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+    border-color: #e63939;
+}
+
+.news-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #30333d;
+    display: block;
+}
+
+.news-content {
+    padding: 24px;
+}
+
+.news-label {
+    color: #ff6969;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.news-content h3 {
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.news-content p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.news-date {
+    color: #888;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.news-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff6969;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-bottom {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.news-bottom a {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #e63939;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+
+<section class="news-section" id="actualites">
+    <h2>LES ACTUALITÉS</h2>
+
+    <p class="news-intro">
+        Toutes les informations du CCPVHS :
+        compétitions, événements, annonces et vie du club.
+    </p>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+            <img class="news-image"
+                 src="images/actualite-1.jpg"
+                 alt="Photo d'une compétition du club">
+
+            <div class="news-content">
+                <span class="news-label">COMPÉTITION</span>
+                <h3>Prochaine compétition</h3>
+                <p>
+                    Retrouvez les informations sur la prochaine
+                    compétition et les pilotes engagés.
+                </p>
+                <div class="news-date">Date à compléter</div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img class="news-image"
+                 src="images/actualite-2.jpg"
+                 alt="Photo de la vie du club">
+
+            <div class="news-content">
+                <span class="news-label">VIE DU CLUB</span>
+                <h3>La vie au CCPVHS</h3>
+                <p>
+                    Découvrez les entraînements, les moments
+                    forts et les activités du club.
+                </p>
+                <div class="news-date">Date à compléter</div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img class="news-image"
+                 src="images/actualite-3.jpg"
+                 alt="Photo d'un événement BMX">
+
+            <div class="news-content">
+                <span class="news-label">ÉVÉNEMENT</span>
+                <h3>Événement du club</h3>
+                <p>
+                    Retrouvez les annonces et les rendez-vous
+                    organisés par le CCPVHS.
+                </p>
+                <div class="news-date">Date à compléter</div>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="news-bottom">
+        <a href="https://www.instagram.com/ccpvhs/"
+           target="_blank" rel="noopener">
+            Suivre les actualités
+        </a>
+    </div>
+</section>
